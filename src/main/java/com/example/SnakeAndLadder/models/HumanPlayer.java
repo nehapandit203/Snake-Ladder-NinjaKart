@@ -10,7 +10,7 @@ public class HumanPlayer extends Player {
 
     private String username;
 
-    public HumanPlayer(Color pieceColor) {
-        super(pieceColor);
+    public HumanPlayer(Color pieceColor,String player) {
+        super(pieceColor,player);
     }
 }

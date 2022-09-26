@@ -7,6 +7,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
 @SpringBootApplication
 public class SnakeAndLadderApplication {
@@ -16,11 +19,11 @@ public class SnakeAndLadderApplication {
 		SpringApplication.run(SnakeAndLadderApplication.class, args);
 
 		//Inputs needed
-		Player p1 = new HumanPlayer(new Color("Green"));//TODO: builder pattern
-		Player p2 = new HumanPlayer(new Color("Blue"));
-		Player p3 = new ComputerPlayer(new Color("Red"));
+		Player p1 = new HumanPlayer(new Color("Green"),"Raj");//TODO: builder pattern
+		Player p2 = new HumanPlayer(new Color("Blue"),"Ram");
+		Player p3 = new ComputerPlayer(new Color("Red"),"Robot");
 
-		ArrayList<Player> players = new ArrayList<>();
+		Queue<Player> players = new LinkedList<>();
 		players.add(p1);
 		players.add(p2);
 		players.add(p3);

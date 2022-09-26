@@ -8,8 +8,11 @@ import lombok.Setter;
 public class Player {
     private Color color;
     private Boolean canMove;
+    private Integer position;
+    private String name;
 
-    public Player(Color pieceColor){
+    public Player(Color pieceColor,String name){
         this.color = pieceColor;
+        this.name = name;
     }
 }

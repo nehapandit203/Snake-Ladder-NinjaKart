@@ -6,14 +6,16 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 @Getter
 @Setter
 public class Game {
     private  Board board;
-    private List<Player> winnerList;
-    private List<Player> playerList;
+    private Queue<Player> winnerList;
+    private Queue<Player> playerList;
     private int dimension = Constants.BOARD_SIZE;
     private int diceCount =Constants.DICE_COUNT;
     private IBoardMove makeMove;
@@ -22,8 +24,8 @@ public class Game {
     //public Game(int dimension,int diceCount){
     public Game(){
         this.board= new Board(dimension);
-        this.playerList = new ArrayList<>();
-        this.winnerList = new ArrayList<>();
+        this.playerList = new LinkedList<>();
+        this.winnerList = new LinkedList<>();
     }
 
 }
