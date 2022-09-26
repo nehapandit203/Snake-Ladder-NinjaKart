@@ -13,5 +13,7 @@ public abstract class CellEntity {
 
     public abstract String getMessage();
     public abstract String getSymbol();
+    public abstract int nextLocation();
+
 
 }

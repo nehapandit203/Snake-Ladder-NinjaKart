@@ -17,4 +17,9 @@ public class NormalCell extends CellEntity{
     public String getSymbol() {
         return " ";
     }
+
+    @Override
+    public int nextLocation() {
+        return 0;
+    }
 }

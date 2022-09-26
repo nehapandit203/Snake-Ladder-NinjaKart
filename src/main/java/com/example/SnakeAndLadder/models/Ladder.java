@@ -23,4 +23,9 @@ public class Ladder extends CellEntity{
     public String getSymbol() {
         return "L";
     }
+
+    @Override
+    public int nextLocation() {
+        return this.endIndex;
+    }
 }
