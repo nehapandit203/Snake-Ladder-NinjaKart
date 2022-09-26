@@ -1,13 +1,11 @@
 package com.example.SnakeAndLadder.models;
 
 import com.example.SnakeAndLadder.Constants;
-import com.example.SnakeAndLadder.strategy.IBoardMove;
+import com.example.SnakeAndLadder.strategy.IBoardMoveStratgy;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 @Getter
@@ -18,7 +16,7 @@ public class Game {
     private Queue<Player> playerList;
     private int dimension = Constants.BOARD_SIZE;
     private int diceCount =Constants.DICE_COUNT;
-    private IBoardMove makeMove;
+    private IBoardMoveStratgy makeMove;
 
 
     //public Game(int dimension,int diceCount){

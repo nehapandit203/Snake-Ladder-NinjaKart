@@ -1,5 +1,7 @@
 package com.example.SnakeAndLadder;
 
+import com.example.SnakeAndLadder.Service.GameServiceImpl;
+import com.example.SnakeAndLadder.Service.IGameService;
 import com.example.SnakeAndLadder.controller.GameController;
 import com.example.SnakeAndLadder.models.*;
 import com.example.SnakeAndLadder.strategy.MoveToTail;
@@ -32,8 +34,8 @@ public class SnakeAndLadderApplication {
 		game.setMakeMove(new MoveToTail());
 
 
-		GameController gameController = new GameController();
-		gameController.launch(game);
+		IGameService gameController = new GameServiceImpl();
+		gameController.run(game);
 	}
 
 }

@@ -10,7 +10,7 @@ public class Snake extends CellEntity{
     int startIndex;
     int endIndex;
 
-    Snake(int startIndex,int endIndex){
+    public Snake(int startIndex, int endIndex){
         super(CellType.SNAKE);
         this.startIndex = startIndex;
         this.endIndex = endIndex;
