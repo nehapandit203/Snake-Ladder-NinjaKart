@@ -9,7 +9,7 @@ import java.util.Queue;
 import java.util.Scanner;
 
 public class GameServiceImpl implements IGameService{
-    IBoardMoveStratgy moveStrategy = new MoveToTail();
+   // IBoardMoveStratgy moveStrategy = new MoveToTail();
     BoardService boardService = new BoardService();
     @Override
     public Queue<Player> run(Game game) {
@@ -22,7 +22,7 @@ public class GameServiceImpl implements IGameService{
 
             Scanner sc = new Scanner(System.in);
             char ch = sc.next().charAt(0);
-            moveStrategy.makeMove(currentPlayer,game);// TODO:
+            game.getMakeMove().makeMove(currentPlayer,game);// TODO:
 
             if (currentPlayer.getPosition() == game.getBoard().getTotalCells()) {
                 System.out.println(currentPlayer.getName() + " won!!!");
